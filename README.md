@@ -1,19 +1,26 @@
-# E-Commerce Funnel Analysis & A/B Testing Report (Audited & Methodologically Verified)
+# E-Commerce Funnel, Retention & A/B Test Analysis
 
-## Executive Summary & Audit Overview
+**Tools:** Python (Pandas, SciPy), SQL (SQLite), Power BI
 
-This report presents an end-to-end analytical investigation of customer conversion journeys, category revenue, cart abandonment, retention cohorts, customer lifetime value (RFM), and advertising effectiveness for an e-commerce platform. 
+## Business Problem
+An online electronics store wanted to know where it loses customers and revenue, who its best customers are, and whether a new ad campaign was worth the extra spend. I analyzed 884K clickstream events (Sep 2020 - Feb 2021) and a 29-day A/B campaign test to answer this.
 
-Following a rigorous methodological audit, **all metrics across all stages have been recomputed** to enforce strict data hygiene, eliminate double-counting, align observation windows, and maintain statistical integrity:
+## Key Findings
+- **Funnel:** 91.55% of browsing sessions never reach the cart. Of sessions that reach the cart, 50.31% complete a purchase (4.25% overall).
+- **Revenue:** $5.13M across 24,344 orders (AOV $210.53). Computers drive 72.76% of revenue.
+- **Cart abandonment:** $4.23M in net lost cart revenue, with 78.41% in computer hardware.
+- **Retention:** only 7.47% of buyers place a repeat order on a later day within 30 days.
+- **Customers:** 2,368 "At Risk" buyers generated 23.99% of revenue but haven't purchased in about 110 days.
+- **A/B test:** the Test campaign spent 11.64% more (p = 0.006) with no significant change in purchases (p = 0.847). Not a win.
 
-1. **Nested Funnel Model:** Stages are strictly nested at the session level. A session is counted as a cart **only if it had a view event in the same session**, and as a purchase **only if it had both a view and a cart event in the same session**. (Zero leaks are guaranteed by design; events are evaluated within each session).
-2. **Cohort-Capped Calendar-Day Retention:** A user is counted as "returned" **only if the subsequent event occurred on a strictly different calendar day** (`date(event_time) > date of first event`). To eliminate cohort truncation bias (since the dataset terminates on February 28, 2021), **observation windows are strictly capped**: only users whose first event occurred on or before February 21, 2021 are included in the 7-day cohort, and on or before January 29, 2021 in the 30-day cohort.
-3. **Unified Lost Cart Revenue Method:** We evaluate unique `(session, product)` cart pairs (49,000 total). Items bought in the same session (22,987) and items subsequently purchased by the same user **at or after cart event time** (2,349) are deducted as recovered (a cart counts as recovered if *any* purchase of that product by that user came at or after the cart time). Carts whose only purchases came before the cart time cannot be recovered and remain lost. This isolates **true net revenue loss of $4,232,867.82 across 23,664 abandoned line items**, with **computer hardware accounting for 78.41% ($3,318,999.10)**.
-4. **Daily-Level A/B Experimentation:** The missing date (August 5, 2019) is dropped from **both groups**, ensuring Test and Control are evaluated over the exact same **29 matched calendar days**. Hypothesis testing is conducted at the daily aggregate level ($N = 29$ days) using both **Welch’s t-test** and the non-parametric **Wilcoxon signed-rank test**, avoiding the pitfall of treating non-independent clicks as independent persons. All verdicts are derived programmatically from test statistics and confidence intervals.
-5. **Audited Terminology & Counts:** "Purchase transactions" is reported as **"items purchased"** (37,343 items), and distinct user sessions are reported as **"orders"** (24,344 unique store orders; 24,849 category-order instances).
-6. **Statistically Grounded Recommendations:** Recommendations reflect statistically confirmed realities. Conversion rate differences in the A/B test are reported with their true non-significant p-value ($p = 0.1232$), view-to-cart conversion fixes target the actual worst-performing categories (such as appliances at 3.99% and country_yard at 2.13%), and retention strategies address the true 30-day repeat purchase rate (7.47%).
+## Dashboard
+![Funnel page](images/dashboard_funnel.png)
+![Customer segments page](images/dashboard_segments.png)
+![A/B test page](images/dashboard_ab.png)
 
----
+## Data Sources
+- Events: [dataset name and link], [license]
+- A/B test: [dataset name and link], [license]
 
 ## Project Structure & Architecture
 
