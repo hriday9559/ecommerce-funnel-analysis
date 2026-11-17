@@ -1,0 +1,16 @@
+main_category,view_sessions,cart_sessions_nested,purchase_sessions_nested,view_to_cart_rate_pct,view_to_cart_dropoff_pct,cart_to_purchase_rate_pct,cart_to_purchase_dropoff_pct,overall_conversion_rate_pct
+Unknown / Uncategorized,149524,8783,4463,5.87,94.13,50.81,49.19,2.98
+computers,148481,19582,9409,13.19,86.81,48.05,51.95,6.34
+electronics,103281,7611,3952,7.37,92.63,51.92,48.08,3.83
+stationery,26926,2489,1466,9.24,90.76,58.9,41.1,5.44
+appliances,25303,1010,530,3.99,96.01,52.48,47.52,2.09
+auto,19698,1257,630,6.38,93.62,50.12,49.88,3.2
+construction,17602,1154,558,6.56,93.44,48.35,51.65,3.17
+furniture,2146,139,63,6.48,93.52,45.32,54.68,2.94
+country_yard,1831,39,16,2.13,97.87,41.03,58.97,0.87
+accessories,1308,58,32,4.43,95.57,55.17,44.83,2.45
+medicine,451,18,9,3.99,96.01,50.0,50.0,2.0
+kids,282,10,5,3.55,96.45,50.0,50.0,1.77
+jewelry,187,10,4,5.35,94.65,40.0,60.0,2.14
+sport,129,12,2,9.3,90.7,16.67,83.33,1.55
+apparel,87,1,0,1.15,98.85,0.0,100.0,0.0

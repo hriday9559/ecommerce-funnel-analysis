@@ -1,0 +1,95 @@
+{
+  "retention": {
+    "all_visitors_7d": {
+      "eligible": 390930,
+      "returned": 22684,
+      "rate_pct": 5.8
+    },
+    "all_visitors_30d": {
+      "eligible": 331650,
+      "returned": 25257,
+      "rate_pct": 7.62
+    },
+    "buyers_site_7d": {
+      "eligible": 20345,
+      "returned": 3872,
+      "rate_pct": 19.03
+    },
+    "buyers_site_30d": {
+      "eligible": 16853,
+      "returned": 3763,
+      "rate_pct": 22.33
+    },
+    "buyers_repurch_7d": {
+      "eligible": 20345,
+      "returned": 1191,
+      "rate_pct": 5.85
+    },
+    "buyers_repurch_30d": {
+      "eligible": 16853,
+      "returned": 1259,
+      "rate_pct": 7.47
+    },
+    "cutoff_7d": "2021-02-21",
+    "cutoff_30d": "2021-01-29"
+  },
+  "cart_loss": {
+    "total_cart_pairs": 49000,
+    "bought_same_session": 22987,
+    "session_abandoned": 26013,
+    "bought_only_before_cart_NOT_deducted": 306,
+    "bought_after_cart_deducted": 2349,
+    "net_truly_lost_pairs": 23664,
+    "net_truly_lost_revenue": 4232867.82,
+    "computers_lost_revenue": 3318999.1,
+    "computers_pct_of_total": 78.41,
+    "rule": "recovered = ANY purchase by same user+product at or after cart time"
+  },
+  "ab_test": {
+    "n_days": 29,
+    "missing_date": "5.08.2019",
+    "control_mean": 522.79,
+    "test_mean": 512.72,
+    "lift_pct": -1.93,
+    "welch_t": -0.194,
+    "welch_p": 0.8469,
+    "wilcoxon_w": 201.0,
+    "wilcoxon_p": 0.9637,
+    "ci_lo": -114.07,
+    "ci_hi": 93.94,
+    "sig": false,
+    "verdict": "THE TEST CAMPAIGN IS NOT A WIN: purchases not significant, and spend was significantly higher.",
+    "cpa_control": 4.41,
+    "cpa_test": 5.02,
+    "cvr_control_pct": 11.48,
+    "cvr_test_pct": 9.1,
+    "cvr_p": 0.1232,
+    "cvr_sig": false,
+    "clicks": {
+      "control_mean": 5320.8,
+      "test_mean": 6038.2,
+      "diff": 717.4,
+      "lift_pct": 13.48,
+      "welch_t": 1.563,
+      "welch_p": 0.1237,
+      "wilcox_w": 146.0,
+      "wilcox_p": 0.126,
+      "ci_lo": -202.2,
+      "ci_hi": 1636.9,
+      "sig": false
+    },
+    "spend": {
+      "control_mean": 2304.07,
+      "test_mean": 2572.24,
+      "diff": 268.17,
+      "lift_pct": 11.64,
+      "welch_t": 2.857,
+      "welch_p": 0.006,
+      "wilcox_w": 114.0,
+      "wilcox_p": 0.0243,
+      "ci_lo": 80.15,
+      "ci_hi": 456.2,
+      "sig": true
+    }
+  }
+}

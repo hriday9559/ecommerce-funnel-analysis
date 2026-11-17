@@ -1,0 +1,7 @@
+user_group,benchmark_period,metric_name,eligible_users,returned_users,rate_pct,window_cutoff_date
+All Site Visitors,7-Day,"Site Visit Return (Strict Calendar Day, Capped Window)",390930,22684,5.8,2021-02-21
+All Site Visitors,30-Day,"Site Visit Return (Strict Calendar Day, Capped Window)",331650,25257,7.62,2021-01-29
+Paying Customers,7-Day,"Site Visit Return (Strict Calendar Day, Capped Window)",20345,3872,19.03,2021-02-21
+Paying Customers,30-Day,"Site Visit Return (Strict Calendar Day, Capped Window)",16853,3763,22.33,2021-01-29
+Paying Customers,7-Day,"Repeat Purchase (Strict Calendar Day, Capped Window)",20345,1191,5.85,2021-02-21
+Paying Customers,30-Day,"Repeat Purchase (Strict Calendar Day, Capped Window)",16853,1259,7.47,2021-01-29
